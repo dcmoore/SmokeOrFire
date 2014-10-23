@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Card Game View Controller-->
@@ -28,13 +29,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flips: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sal-u5-Xba">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sal-u5-Xba">
                                 <rect key="frame" x="33" y="447" width="56" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="Mlf-ps-MeI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-9v-u95">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-9v-u95">
                                 <rect key="frame" x="20" y="346" width="48" height="30"/>
                                 <state key="normal" title="Smoke">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,8 +69,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="sal-u5-Xba" firstAttribute="top" secondItem="XO8-9v-u95" secondAttribute="bottom" constant="71" id="JUB-1N-ddD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sal-u5-Xba" secondAttribute="bottom" constant="100" id="NrL-Sc-tAS"/>
                             <constraint firstItem="QM3-ri-K5n" firstAttribute="top" secondItem="qia-Dv-x6W" secondAttribute="bottom" constant="52" id="RpI-Oe-oqi"/>
                             <constraint firstItem="qia-Dv-x6W" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="TtM-E7-o5z"/>
+                            <constraint firstItem="sal-u5-Xba" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="17" id="e3q-49-ZLA"/>
                             <constraint firstItem="qia-Dv-x6W" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="127" id="xeI-MC-MRi"/>
                             <constraint firstItem="qia-Dv-x6W" firstAttribute="centerX" secondItem="QM3-ri-K5n" secondAttribute="centerX" id="yqb-xM-xsw"/>
                         </constraints>
